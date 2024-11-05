@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fifty Shades of Colors{% endblock %}
+
+{% block body %}
+    <div style="padding: 20px;">
+        <h1>Fifty Shades of Colors</h1>
+        
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    {% for color in colors %}
+                        <th style="padding: 10px; text-align: center; border: 1px solid #ccc;">
+                            {{ color|capitalize }}
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in 0..(numberOfColors-1) %}
+                    <tr>
+                        {% for color in colors %}
+                            <td style="height: 40px; width: 80px; border: 1px solid #ccc; background-color: {{ shades[color][i] }};">
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
