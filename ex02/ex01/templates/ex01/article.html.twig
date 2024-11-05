@@ -1,0 +1,13 @@
+{% extends 'ex01/base.html.twig' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <article>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+        <p>
+            <a href="{{ path('app_e01_index') }}">Back to Articles</a>
+        </p>
+    </article>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'ex01/base.html.twig' %}
+
+{% block content %}
+    <h2>Available Articles</h2>
+    <ul class="article-list">
+        {% for category, article in articles %}
+            <li>
+                <a href="{{ path('app_e01_article', {'category': category}) }}">
+                    {{ article.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
