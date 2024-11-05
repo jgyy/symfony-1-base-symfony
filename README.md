@@ -5,6 +5,11 @@
 
 **Version**: 2
 
+```sh
+symfony new . --version=lts
+symfony server:start
+```
+
 ## Contents
 - I. Foreword
 - II. General rules
